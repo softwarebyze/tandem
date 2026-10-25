@@ -80,16 +80,18 @@ tandem timeline --summary
 
 ### Zack vs Can
 
-The first project is **Zack vs Can - Part 1**. Its source serves are the videos
-from one practice session. The videos are tagged as B-roll to give them visual
+The first project is **Zack vs Can - Part 1**, a vertical 9:16 video for
+Instagram (1080×1920 at 30 fps). Its source serves are the videos from one
+practice session. The videos are tagged as B-roll to give them visual
 thumbnails in the Media panel's **broll** filter, without starting speech
-transcription for every serve. The timeline viewer updates as you move the playhead, so compare
-serves there while reviewing the footage. Press `1` for a full frame, `2` or
-`3` for picture-in-picture, and `4` for a two-up split. For a four-serve
-comparison, place the clips on separate video tracks and set each clip's size
-and position to make a 2×2 grid. Add the serve number as a text overlay and
-use a consistent green style for serves that clear the net and red for net
-clips. Keep the original sound when it helps identify net contact.
+transcription for every serve. The timeline viewer updates as you move the
+playhead, so compare serves there while reviewing the footage. Press `1` for a
+full frame, `2` or `3` for picture-in-picture, and `4` for a two-up split. For
+a side-by-side or four-serve comparison in the portrait frame, place clips on
+separate video tracks and set their size and position to create horizontal
+bands or a 2×2 grid. Add each serve's number as a text overlay and use a
+consistent green style for serves that clear the net and red for net clips.
+Keep the original sound when it helps identify net contact.
 
 For agents, add the MCP server once:
 
