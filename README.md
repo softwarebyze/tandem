@@ -10,9 +10,9 @@ macOS
 
 ## What it is
 
-This is the video editor I'm building for my Convex videos to replace Filmora. It's built so my agents can edit the same project as me, through a CLI and an MCP server, while I work in the app.
+This fork is set up for my **Zack vs Can** tennis series: serve montages I can compare, annotate, and revisit as my game improves. Tandem keeps the editor, its CLI, and AI agents working on the same local project.
 
-A project is just a `.tandem` JSON file in the video's folder. Tandem finds the media there, pairs up my Record It camera and screen takes, and does transcripts, waveforms and the cutout in the background.
+A project is a `.tandem` JSON file alongside its source media. Tandem indexes the media and builds thumbnails and waveforms in the background. Source videos stay in place while the edit lives in the project file.
 
 ![Tandem editing the decision-models video](docs/header.jpg)
 
@@ -78,6 +78,19 @@ tandem status
 tandem timeline --summary
 ```
 
+### Zack vs Can
+
+The first project is **Zack vs Can - Part 1**. Its source serves are the videos
+from one practice session. The videos are tagged as B-roll to give them visual
+thumbnails in the Media panel's **broll** filter, without starting speech
+transcription for every serve. The timeline viewer updates as you move the playhead, so compare
+serves there while reviewing the footage. Press `1` for a full frame, `2` or
+`3` for picture-in-picture, and `4` for a two-up split. For a four-serve
+comparison, place the clips on separate video tracks and set each clip's size
+and position to make a 2×2 grid. Add the serve number as a text overlay and
+use a consistent green style for serves that clear the net and red for net
+clips. Keep the original sound when it helps identify net contact.
+
 For agents, add the MCP server once:
 
 ```bash
@@ -85,11 +98,11 @@ claude mcp add tandem -- ~/Applications/Tandem.app/Contents/MacOS/tandem mcp
 ```
 
 Old Filmora projects import with `tandem import filmora "Video v3.wfp"`.
-Agent EDLs import with `tandem import edl edit.json --recipe decision-models`.
-That recipe has paths and settings for my Decision Models video, so change
-it for your footage or add your own. The [agent guide](docs/AGENTS.md) is
-the entry point for agents; its topic files in `docs/agents/` have the
-recipes, import options and troubleshooting.
+Agent EDLs import with `tandem import edl edit.json`. The upstream
+`decision-models` recipe is specific to Mike's video and is not part of this
+tennis workflow. The [agent guide](docs/AGENTS.md) is the entry point for
+agents; its topic files in `docs/agents/` cover editing, import options and
+troubleshooting.
 
 Stickers, graphics, sounds, music, looks, fonts and saved segments that
 every video reuses live in `~/Movies/Tandem Library`, which Tandem makes
